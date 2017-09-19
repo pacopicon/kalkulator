@@ -1,0 +1,27 @@
+{
+  "name": "calculator",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "babel-jest": "^21.0.2",
+    "enzyme": "^2.8.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-scripts": "^1.0.2",
+    "regenerator-runtime": "^0.11.0"
+  },
+  "dependencies": {
+    "jest": "^21.1.0",
+    "mathjs": "^3.16.3",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.0",
+    "react-dom": "^15.5.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "test": "jest"
+  }
+}
