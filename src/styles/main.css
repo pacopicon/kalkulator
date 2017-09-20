@@ -45,8 +45,9 @@ input {
 	width: 121px;
 }
 
-.submitBtn {
+.submitBtn, .sqrt, .storeRetrieve {
 	height: 100%;
+	padding-top: 10px;
 }
 
 .inputBtn {
@@ -73,6 +74,6 @@ input {
 	caret-color: white;
 }
 
-input, .modulo, .sqrt, .exp, .storeRetrieve, .rowOneBtn, .rowTwoBtn, .rowThreeBtn, .rowFourBtn, .submitBtn, .parentheses {
-	border-bottom: 0.5px solid white;
+input, .modulo, .sqrt, .exp, .storeRetrieve, .rowOneBtn, .rowTwoBtn, .rowThreeBtn, .rowFourBtn, .rowFiveBtn, .submitBtn, .parentheses {
+	border-bottom: 1px solid white;
 }
