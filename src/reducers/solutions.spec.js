@@ -1,23 +1,21 @@
 import solutions from './solutions'
 
 describe('solutions reducer', () => {
-  test('should handle initial state', () => {
+  it('should handle initial state', () => {
     expect(
       solutions(undefined, {})
-    ).toBe([])
+    ).toEqual([])
   })
 
-  test('should handle PARSE', () => {
+  it('should handle PARSE', () => {
     expect(
       solutions([], {
         type: 'PARSE',
-        text: '8-4',
-        id: 0
+        text: '8-4'
       })
-    ).toBe([
+    ).toEqual([
       {
-        text: '4',
-        id: 0
+        text: '4'
       }
     ])
 
@@ -32,7 +30,7 @@ describe('solutions reducer', () => {
         text: '3/4',
         id: 1
       })
-    ).toBe([
+    ).toEqual([
       {
         text: '3+4',
         id: 0
@@ -56,12 +54,12 @@ describe('solutions reducer', () => {
         text: '4(4)',
         id: 2
       })
-    ).toBe([
+    ).toEqual([
       {
-        text: '15',
+        text: '3*5',
         id: 0
       }, {
-        text: '16',
+        text: '4(4)',
         id: 1
       }, {
         text: '16',

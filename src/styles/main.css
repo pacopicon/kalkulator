@@ -11,17 +11,7 @@ body {
 
 p, input {
 	font-size: 40px;
-	font-family: 'Anonymous Pro', monospace; 
-	/*font-family: 'Lato', sans-serif;*/
-	/*font-family: 'Inconsolata', monospace;*/
-	/*font-family: 'Josefin Sans', sans-serif;*/
-	/*font-family: 'Quicksand', sans-serif;*/
-	/*font-family: 'Archivo Black', sans-serif;*/
-	/*font-family: 'Concert One', cursive;*/
-	/*font-family: 'Varela', sans-serif;*/
-	/*font-family: 'Chivo', sans-serif;*/
-	/*font-family: 'Allerta', sans-serif;*/
-	
+	font-family: 'Inconsolata', monospace;
 }
 
 
@@ -83,20 +73,6 @@ input {
 	caret-color: white;
 }
 
-.rowOneBtn {
+input, .rowOneBtn, .rowTwoBtn, .rowThreeBtn, .rowFourBtn, .submitBtn, .parentheses {
 	border-bottom: 0.5px solid white;
-}
-
-.rowTwoBtn {
-	border-top: 0.5px solid white;
-	border-bottom: 0.5px solid white;
-}
-
-.rowThreeBtn {
-	border-top: 0.5px solid white;
-	border-bottom: 0.5px solid white;
-}
-
-.rowFourBtn, .submitBtn, .parentheses {
-	border-top: 0.5px solid white;
 }
