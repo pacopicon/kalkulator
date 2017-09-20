@@ -73,6 +73,6 @@ input {
 	caret-color: white;
 }
 
-input, .rowOneBtn, .rowTwoBtn, .rowThreeBtn, .rowFourBtn, .submitBtn, .parentheses {
+input, .modulo, .sqrt, .exp, .storeRetrieve, .rowOneBtn, .rowTwoBtn, .rowThreeBtn, .rowFourBtn, .submitBtn, .parentheses {
 	border-bottom: 0.5px solid white;
 }

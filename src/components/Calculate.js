@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { store, retrieve } from '../helpers'
 
 const rowOneButtons = ['1','2','3','4']
 const rowTwoButtons = ['5','6','7','8']
@@ -8,11 +9,18 @@ let input
 
 export default class Calculate extends Component {
 
-  state = { parenthesis: '(' }
+  state = { 
+    parenthesis: '(',
+    storing: true
+  }
   
   togglePar = () => {
     this.setState({ parenthesis: (this.state.parenthesis == '(') ? ')' : '('})
     return this.state.parenthesis
+  }
+
+  toggleStore = () => {
+    this.setState({ storing: !this.state.storing})
   }
 
   handleSubmit = e => {
@@ -83,9 +91,47 @@ export default class Calculate extends Component {
           }}>
           <p>{this.state.parenthesis}</p>
           </button>
+          <button className="inputBtn modulo" onClick={e => {
+            e.preventDefault()
+            input.value = input.value + '%'
+          }}>
+            <p>%</p>
+          </button> 
+        </div>
+        <div className="rowFive">
+          <button className="inputBtn sqrt" onClick={e => {
+            e.preventDefault()
+            input.value = input.value + 'sqrt' + this.togglePar()
+          }}>
+            <p>&#8730;</p>
+          </button>
+          <button className="inputBtn exp" onClick={e => {
+            e.preventDefault()
+            input.value = input.value + '^'
+          }}>
+            <p>x<sup>y</sup></p>
+          </button>
+          {
+            this.state.storing 
+            ? <button className="storeRetrieve inputBtn" onClick={e => {
+                e.preventDefault()
+                store(input.value)
+                this.toggleStore()
+                input.value = ''
+              }}>
+              <p>S</p>  
+              </button>
+            : <button className="storeRetrieve inputBtn" onClick={e => {
+                e.preventDefault()
+                input.value = input.value + retrieve()
+                this.toggleStore()
+              }}>
+                <p>R</p>
+              </button>
+          }
           <button className="submitBtn inputBtn" type="submit">
             <p>=</p>
-          </button> 
+          </button>
         </div>
       </form>
     </div>

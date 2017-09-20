@@ -66,6 +66,46 @@ describe('solutions reducer', () => {
         id: 2
       }
     ])
+
+    expect(
+      solutions([], {
+        type: 'PARSE',
+        text: ')9',
+        id: 2
+      })
+    ).toEqual([
+      {
+        text: "Forgot at least one '('",
+        id: 2
+      }
+    ])
+
+    expect(
+      solutions([], {
+        type: 'PARSE',
+        text: '9(',
+        id: 3
+      })
+    ).toEqual([
+      {
+        text: "Forgot at least one ')'",
+        id: 3
+      }
+    ])
+
+    expect(
+      solutions([], {
+        type: 'PARSE',
+        text: '*8',
+        id: 4
+      })
+    ).toEqual([
+      {
+        text: "Cannot parse '*8'",
+        id: 4
+      }
+    ])
+
   })
 
 })
