@@ -3,9 +3,9 @@ import { eval as e } from 'mathjs'
 export const qaString = (str) => {
   var openParArr = []
   var closeParArr = []
-  if (str.match(/[-+*/]$/g) || str.match(/^[-+*/]/g) || !str.match(/[0-9\(\)/*+-]/g)) {
-      return `Cannot parse '${str}'`
-    } 
+  if (str.match(/[-+*/]$/g) || str.match(/^[*/]/g) || !str.match(/[0-9\(\)/*+-]/g)) {
+    return `Cannot parse '${str}'`
+  } 
   for (var i=0; i<str.length; i++) {
     var char = str.charAt(i)
     if (char.match(/\)/g)) {
