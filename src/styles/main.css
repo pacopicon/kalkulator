@@ -1,5 +1,5 @@
 body {
-	background-color: black;
+	background-color: pink;
 	display: table;
 	margin: 0 auto;
 	height: 1000px;
@@ -13,12 +13,16 @@ body {
 	width: 80%;
 	/*padding-top: 40%;*/
 	/*bottom: 40%;*/
-	background-color: black;
+	background-color: pink;
 }
 
 p, input {
-	font-size: 40px;
+	font-size: 35px;
 	font-family: 'Inconsolata', monospace;
+}
+
+input {
+	color: purple;
 }
 
 
@@ -37,50 +41,58 @@ p, input {
 
 .displayLine p {
 	height: 5px;
-	color: white;
+	color: purple;
 }
 
 input {
 	width: 100%;
 	height: 50px;
 	border-style: none;
-	background-color: black;
-	color: white;
+	background-color: pink;
+	color: purple;
 }
 
-.submit {
-	width: 121px;
-}
-
-.submitBtn, .sqrt, .pi, .storeRetrieve, .clear, .backspace {
+/*.exp, .backspace {
 	height: 100%;
-	padding-top: 10px;
-}
+}*/
 
 .inputBtn {
+	border-radius: 5em;
+	border: 1px solid purple;
 	width: 20%;
-	height: 20%;
-	background-color: black;
-	color: white;
+	height: 105px;
+	background-color: purple;
+	color: pink;
 	border-style: none;
 	transition-duration: 0.5s;
 }
 
+.rowOne.inputBtn {
+	line-height: 0.5em;
+}
+
 .inputBtn:hover {
-	background-color: white;
-	color: black;
+	border-radius: 0em;
+	/*background-color: violet;*/
+	background-color: pink;
+	color: purple;
+	/*color: pink;*/
 	transition-duration: 0.5s;
 }
 
 input:focus, button:focus {
-	/*background-color: gray;*/
 	outline: none;
 }
 
 input {
-	caret-color: white;
+	caret-color: purple;
 }
 
-input, .pi, .clear, .backspace, .modulo, .sqrt, .exp, .storeRetrieve, .rowOneBtn, .rowTwoBtn, .rowThreeBtn, .rowFourBtn, .rowFiveBtn, .submitBtn, {
+/*input, .rowOne, .rowTwo, .rowThree, .rowFour, .rowFive  {
 	border-bottom: 1px solid white;
+}*/
+
+.rowOne, .rowTwo, .rowThree, .rowFour, .rowFive {
+	position: relative;
+	height: 20%;
 }

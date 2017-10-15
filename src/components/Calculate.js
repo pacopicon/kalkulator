@@ -5,6 +5,7 @@ const rowOneButtons = ['1','2','3','4','5']
 const rowTwoButtons = ['6','7','8','9','0']
 const rowThreeButtons = ['.','*','/','+','-']
 const rowFourButtons = ['(',')']
+const back = "<"
 let input
 
 export default class Calculate extends Component {
@@ -111,7 +112,7 @@ export default class Calculate extends Component {
               e.preventDefault()
               input.value = input.value + '^'
             }}>
-            <p>x<sup>y</sup></p>
+            <p>exp</p>
           </button> 
         </div>
 
@@ -131,7 +132,7 @@ export default class Calculate extends Component {
               var str = input.value
               input.value = str.slice(0, str.length-1)
             }}>
-            <p>&#8678;</p>
+            <p>{back}</p>
           </button>
 
           <button className="inputBtn clear" 
