@@ -43,7 +43,7 @@ export default class Calculate extends Component {
     <div>
       <form onSubmit={this.handleSubmit} onKeyPress={this.handleEnter}>
         <input className="input" ref={node => {input = node}} />
-        <div className="rowOne">
+        <div className="row rowOne">
           {rowOneButtons.map((rowOneButton, i) => (
             <button className="inputBtn rowOneBtn" 
               onClick={e => {
@@ -55,7 +55,7 @@ export default class Calculate extends Component {
             </button>
           ))}
         </div>
-        <div className="rowTwo">
+        <div className="row rowTwo">
           {rowTwoButtons.map((rowTwoButton, i) => (
             <button className="inputBtn rowTwoBtn" 
               onClick={e => {
@@ -67,7 +67,7 @@ export default class Calculate extends Component {
             </button>
           ))}
         </div>
-        <div className="rowThree">
+        <div className="row rowThree">
           {rowThreeButtons.map((rowThreeButton, i) => (
             <button className="inputBtn rowThreeBtn" 
               onClick={e => {
@@ -79,7 +79,7 @@ export default class Calculate extends Component {
             </button>
           ))} 
         </div>
-        <div className="rowFour">
+        <div className="row rowFour">
           {rowFourButtons.map((rowFourButton, i) => (
             <button className="inputBtn rowFourBtn" 
               onClick={e => {
@@ -116,7 +116,7 @@ export default class Calculate extends Component {
           </button> 
         </div>
 
-        <div className="rowFive">
+        <div className="row rowFive">
 
           <button className="inputBtn pi" 
             onClick={e => {
