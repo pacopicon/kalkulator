@@ -96,10 +96,6 @@ input:focus, button:focus {
 		height: 170px;
 	}
 
-	.inputBtn {
-		border-radius: 10em;
-	}
-
 	p, input {
 		font-size: 340%;
 	}
@@ -114,10 +110,6 @@ input:focus, button:focus {
 
 	.row {
 		height: 170px;
-	}
-
-	.inputBtn {
-		border-radius: 10em;
 	}
 
 	p, input {
@@ -136,15 +128,11 @@ input:focus, button:focus {
 		height: 150px;
 	}
 
-	.inputBtn {
-		border-radius: 10em;
-	}
-
 	p, input {
 		font-size: 340%;
 	}
 
-  #root {
+  	#root {
 		padding-top: 5.5%;
 	}
 
@@ -160,7 +148,7 @@ input:focus, button:focus {
 		font-size: 215%;
 	}
 
-  #root {
+  	#root {
 		padding-top: 25%;
 	}
 
