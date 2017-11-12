@@ -5,34 +5,45 @@ body {
 }
 
 #root {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.app {
 	overflow: auto;
 	margin: 0 auto;
 	display: table-cell;
 	vertical-align: middle;
-	padding-top: 45%;
-	width: 80%;
+	/*padding-top: 45%;*/
+	width: 500px;
 	background-color: black;
 }
 
-p, input {
-	font-size: 195%;
-	font-family: 'Inconsolata', monospace;
-}
+/*.app {
+	width: 80%;
+}*/
 
 .display {
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	width: 100%;
-	height: 180px;
+	height: 400px;
+	margin: 0;
+	padding: 0;
 }
 
 .displayLine {
 	float: left;
 	width: 100%;
 	padding-left: 10px;
+	padding-right: 0;
+	margin: 0;
 	height: 35px;
 }
 
 .displayLine p {
+	text-overflow: hidden;
 	height: 5px;
 	color: white;
 }
@@ -45,6 +56,11 @@ input {
 	background-color: black;
 	color: white;
 	caret-color: gray;
+}
+
+p, input {
+	font-size: 195%;
+	font-family: 'Inconsolata', monospace;
 }
 
 .inputBtn {
@@ -90,98 +106,301 @@ input:focus, button:focus {
 	outline: none;
 }
 
-@media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation : portrait) {
+@media only screen and (max-height: 1024px) and (min-height: 1023px) and (max-width: 1366px) and (min-width: 1365px) and (orientation : landscape) {
+
+	body {
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+
+	#root {
+		overflow: auto;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		padding: 0;
+	}
+
+	.app {
+		width: 80%;
+		/*height: 1024px;*/
+	}
+
+	.display {
+		height: 200px;
+		padding-left: 350px;
+		padding-top: 40px;
+	}
+
+	.displayLine {
+		height: 26px;
+	}
 
 	.row {
-		height: 170px;
+		height: 130px;
+		padding-left: 350px;
+		padding-right: 350px;
+	}
+
+	input {
+		padding-left: 360px
 	}
 
 	p, input {
-		font-size: 340%;
-	}
-
-  #root {
-		padding-top: 25%;
+		font-size: 175%;
 	}
 
 }
 
-@media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation : landscape) {
+@media only screen and (max-width: 1024px) and (min-width: 1023px) and (max-height: 1366px) and (min-height: 1365px) and (orientation : portrait) {
+
+	body {
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+
+	#root {
+		overflow: auto;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		padding: 0;
+	}
+
+	.app {
+		width: 768px;
+		/*height: 1024px;*/
+	}
+
+	.display {
+		height: 200px;
+		padding-left: 245px;
+		padding-top: 340px;
+	}
+
+	.displayLine {
+		height: 27px;
+	}
 
 	.row {
-		height: 170px;
+		height: 100px;
+		padding-left: 245px
+	}
+
+	input {
+		padding-left: 255px
 	}
 
 	p, input {
-		font-size: 340%;
-	}
-
-  #root {
-		padding-top: 5%;
+		font-size: 175%;
 	}
 
 }
 
-@media only screen and (max-width: 768px) and (max-height: 1024px) and (orientation : portrait) {
+@media only screen and (max-height: 768px) and (min-height: 767px) and (max-width: 1024px) and (min-width: 1023px) and (orientation : landscape) {
+
+	body {
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+
+	#root {
+		overflow: auto;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		padding: 0;
+	}
+
+	.app {
+		width: 768px;
+		/*height: 1024px;*/
+	}
+
+	.display {
+		height: 200px;
+		padding-left: 245px;
+		padding-top: 40px;
+	}
+
+	.displayLine {
+		height: 26px;
+	}
 
 	.row {
-		height: 150px;
+		height: 90px;
+		padding-left: 245px
+	}
+
+	input {
+		padding-left: 255px
 	}
 
 	p, input {
-		font-size: 340%;
-	}
-
-  	#root {
-		padding-top: 5.5%;
+		font-size: 175%;
 	}
 
 }
 
-@media only screen and (max-width: 414px) and (max-height: 736px) and (orientation : portrait) {
+@media only screen and (max-width: 768px) and (min-width: 767px) and (max-height: 1024px) and (min-height: 1023px) and (orientation : portrait) {
+
+	body {
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+
+	#root {
+		overflow: auto;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+	}
+
+	.app {
+		width: 768px;
+	}
+
+	.display {
+		height: 202px;
+	}
+
+	.displayLine {
+		height: 24.5px;
+	}
+
+	.row {
+		height: 144px;
+	}
+
+	p, input {
+		font-size: 195%;
+	}
+
+}
+
+@media only screen and (max-width: 414px) and (min-width: 413px) and (max-height: 736px) and (min-height: 735px) and (orientation : portrait) {
+
+	body {
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+
+	#root {
+		overflow: auto;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+	}
+
+	.app {
+		width: 420px;
+	}
+
+	.display {
+		height: 252px;
+	}
+
+	.displayLine {
+		height: 25px;
+	}
 
 	.row {
 		height: 80px;
 	}
 
 	p, input {
-		font-size: 215%;
-	}
-
-  	#root {
-		padding-top: 25%;
+		font-size: 175%;
 	}
 
 }
 
-@media only screen and (max-width: 375px) and (max-height: 667px) and (orientation : portrait) {
+@media only screen and (max-width: 375px) and (min-width: 374px) and (max-height: 667px) and (min-height: 666px) and (orientation : portrait) {
+
+	body {
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+
+	#root {
+		overflow: auto;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+	}
+
+	.app {
+		width: 420px;
+	}
+
+	.display {
+		height: 205px;
+	}
+
+	.displayLine {
+		height: 20px;
+	}
 
 	.row {
-		height: 75px;
+		height: 76px;
 	}
 
 	p, input {
-		font-size: 200%;
-	}
-
-  #root {
-		padding-top: 16%;
+		font-size: 145%;
 	}
 
 }
 
 @media only screen and (max-width: 320px) and (max-height: 568px) and (orientation : portrait) {
 
+	body {
+		height: 100%;
+		width: 100%;
+	}
+
+	#root {
+		overflow: auto;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		background-color: black;
+	}
+
+	.app {
+		width: 320px;
+	}
+
+	.display {
+		height: 165px;
+	}
+
+	.displayLine {
+		height: 18px;
+	}
+
 	.row {
 		height: 65px;
 	}
 
 	p, input {
-		font-size: 165%;
-	}
-
-  #root {
-		padding-top: 3.5%;
+		font-size: 125%;
 	}
 
 }

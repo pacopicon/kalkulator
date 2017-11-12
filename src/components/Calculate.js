@@ -40,7 +40,7 @@ export default class Calculate extends Component {
     const { parse } = this.props
 
     return (
-    <div>
+    <div className="belowDisplay">
       <form onSubmit={this.handleSubmit} onKeyPress={this.handleEnter}>
         <input className="input" ref={node => {input = node}} />
         <div className="row rowOne">
